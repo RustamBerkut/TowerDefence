@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class Monster : MonoBehaviour {
+public class Monster : MonoBehaviour 
+{
 
 	public GameObject m_moveTarget;
 	public float m_speed = 0.1f;
@@ -10,7 +12,8 @@ public class Monster : MonoBehaviour {
 
 	public int m_hp;
 
-	void Start() {
+	private void Start() 
+	{
 		m_hp = m_maxHP;
 	}
 

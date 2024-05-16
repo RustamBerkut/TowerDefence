@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_interval: 2
   m_moveTarget: {fileID: 1793304109}
+  m_enemy: {fileID: 3434701021208436600, guid: c19f450f859f89646a5349d7ace9c97b, type: 3}
 --- !u!4 &780892721
 Transform:
   m_ObjectHideFlags: 0
@@ -456,8 +457,8 @@ Transform:
   m_GameObject: {fileID: 802732411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.849351, y: 4.361471, z: 0.5355859}
-  m_LocalScale: {x: 40, y: 1, z: 20}
+  m_LocalPosition: {x: -7.849351, y: 4.361471, z: 6.72}
+  m_LocalScale: {x: 40, y: 1, z: 66.496}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 229700400}
