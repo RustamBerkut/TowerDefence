@@ -6,12 +6,6 @@ public class CannonProjectile : MonoBehaviour
 	public float m_speed = 0.2f;
 	public int m_damage = 10;
 
-	private void Update () 
-	{
-		var translation = transform.forward * m_speed;
-		transform.Translate (translation);
-	}
-
 	private void OnTriggerEnter(Collider other) 
 	{
 		if (!other.gameObject.TryGetComponent<Monster>(out var monster))

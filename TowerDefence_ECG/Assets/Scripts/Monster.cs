@@ -4,12 +4,11 @@ using UnityEngine.UI;
 
 public class Monster : MonoBehaviour 
 {
+    const float m_reachDistance = 0.3f;
 
-	public GameObject m_moveTarget;
-	public float m_speed = 0.1f;
+    public GameObject m_moveTarget;
+	public float m_speed = 0.01f;
 	public int m_maxHP = 30;
-	const float m_reachDistance = 0.3f;
-
 	public int m_hp;
 
 	private void Start() 
@@ -17,16 +16,18 @@ public class Monster : MonoBehaviour
 		m_hp = m_maxHP;
 	}
 
-	void Update () {
+	private void Update () 
+	{
 		if (m_moveTarget == null)
 			return;
 		
-		if (Vector3.Distance (transform.position, m_moveTarget.transform.position) <= m_reachDistance) {
+		if (Vector3.Distance (transform.position, m_moveTarget.transform.position) <= m_reachDistance) 
+		{
 			Destroy (gameObject);
 			return;
 		}
 
-		var translation = m_moveTarget.transform.position - transform.position;
+        var translation = m_moveTarget.transform.position - transform.position;
 		if (translation.magnitude > m_speed) {
 			translation = translation.normalized * m_speed;
 		}

@@ -149,6 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveTarget: {fileID: 0}
-  m_speed: 0.1
+  m_speed: 0.01
   m_maxHP: 30
   m_hp: 0
