@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8131414600661689429}
   - component: {fileID: 3348044168229128236}
   - component: {fileID: 4025894196171505104}
+  - component: {fileID: 6993016008786643033}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,11 +132,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 84
-  m_CollisionDetection: 1
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!114 &4025894196171505104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveTarget: {fileID: 0}
-  m_speed: 0.01
+  m_speed: 0.04
+--- !u!114 &6993016008786643033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434701021208436600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4991a6654c45948b32bbcb30079585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_maxHP: 30
-  m_hp: 0

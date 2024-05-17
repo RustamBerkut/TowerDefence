@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GuidedProjectile : MonoBehaviour {
+public class GuidedProjectile : MonoBehaviour 
+{
 	public GameObject m_target;
 	public float m_speed = 0.2f;
-	public int m_damage = 10;
 
-	void Update () {
+	[SerializeField] private int m_damage = 10;
+
+	private void Update () 
+	{
 		if (m_target == null) {
 			Destroy (gameObject);
 			return;
@@ -19,15 +22,11 @@ public class GuidedProjectile : MonoBehaviour {
 		transform.Translate (translation);
 	}
 
-	void OnTriggerEnter(Collider other) {
-		var monster = other.gameObject.GetComponent<Monster> ();
-		if (monster == null)
-			return;
+	private void OnTriggerEnter(Collider other) {
+        if (!other.gameObject.TryGetComponent<MonsterHealthSystem>(out var monster))
+            return;
 
-		monster.m_hp -= m_damage;
-		if (monster.m_hp <= 0) {
-			Destroy (monster.gameObject);
-		}
-		Destroy (gameObject);
-	}
+        monster.TakeDamage(m_damage);
+        Destroy(gameObject);
+    }
 }

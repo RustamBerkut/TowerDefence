@@ -4782,6 +4782,7 @@ GameObject:
   - component: {fileID: 2327986}
   - component: {fileID: 11464742}
   - component: {fileID: 1199147935088449942}
+  - component: {fileID: 3093890824841433572}
   m_Layer: 0
   m_Name: CannonProjectile
   m_TagString: Untagged
@@ -4888,7 +4889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019f8dc2a5c029b4ba931342c77e6736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 100
+  m_speed: 50
   m_damage: 10
 --- !u!54 &1199147935088449942
 Rigidbody:
@@ -4917,3 +4918,15 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3093890824841433572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe60107b3dfeed459d208afb08d0ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
